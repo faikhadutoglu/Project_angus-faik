@@ -43,3 +43,15 @@ public:
     // Implementation of the solve_problem method that outputs a message
     void solve_problem() const override;
 };
+
+// Derived class SeniorDeveloper
+class SeniorDeveloper : public Developer {
+public:
+    // Constructor to initialize name and alias
+    SeniorDeveloper(const std::string& name, const std::string& alias);
+
+    // Implementation of the solve_problem method that outputs a message
+    void solve_problem() const override;
+};
+
+#endif // DEVELOPER_HPP
