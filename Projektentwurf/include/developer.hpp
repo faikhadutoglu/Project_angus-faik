@@ -33,3 +33,13 @@ private:
     std::string alias; // Member variable for the alias name
     std::string logo;  // Member variable for the logo
 };
+
+// Derived class JuniorDeveloper
+class JuniorDeveloper : public Developer {
+public:
+    // Constructor to initialize name and alias
+    JuniorDeveloper(const std::string& name, const std::string& alias);
+
+    // Implementation of the solve_problem method that outputs a message
+    void solve_problem() const override;
+};
