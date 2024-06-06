@@ -39,3 +39,22 @@ std::ostream& operator<<(std::ostream& os, const Developer& dev) {
     }
     return os;
 }
+// Constructor of the JuniorDeveloper class, calls the constructor of the base class
+JuniorDeveloper::JuniorDeveloper(const std::string& name, const std::string& alias) 
+    : Developer(name, alias) {}
+
+// Implementation of the solve_problem method for JuniorDeveloper
+void JuniorDeveloper::solve_problem() const {
+    std::cout << *this << "\nPuh, that was tough" << std::endl; // Output the Developer information and a message
+    drink_coffee(); // Call the drink_coffee method
+}
+
+// Constructor of the SeniorDeveloper class, calls the constructor of the base class
+SeniorDeveloper::SeniorDeveloper(const std::string& name, const std::string& alias) 
+    : Developer(name, alias) {}
+
+// Implementation of the solve_problem method for SeniorDeveloper
+void SeniorDeveloper::solve_problem() const {
+    std::cout << *this << "\nHa, that was EZ!" << std::endl; // Output the Developer information and a message
+    drink_coffee(); // Call the drink_coffee method
+}
