@@ -1,5 +1,5 @@
-#include "gtest/gtest.h"  // include the gtest functions & macros
-#include "developer.hpp"  // include the developer definitions
+#include "gtest/gtest.h"
+#include "../include/developer.hpp"
 
 TEST(DeveloperTest, TestSeniorDeveloper) {
     SeniorDeveloper sd("Diana Prince", "Wonder Woman");

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run CMake to generate build files
-cmake  -S . -B build
+cmake -S . -B build
 
 # Navigate to the build directory
 cd build  
@@ -13,7 +13,7 @@ make
 ./library_ex_exec
 
 # Run the tests
-ctest
+ctest || { echo "Tests failed"; exit 1; }
 
 # Navigate back to the parent directory
 cd .. 

@@ -1,6 +1,6 @@
-#include "developer.hpp"
-#include <vector>
+#include "../include/developer.hpp"
 #include <memory>
+#include <vector>
 #include <iostream>
 #include <fstream>
 
@@ -30,7 +30,6 @@ int main() {
     // Create JuniorDeveloper and SeniorDeveloper objects
     auto junior = std::make_shared<JuniorDeveloper>("Peter Parker", "Spiderman");
     auto senior = std::make_shared<SeniorDeveloper>("Diana Prince", "Wonder Woman");
-
 
     // Load the logos from the files
     try {
