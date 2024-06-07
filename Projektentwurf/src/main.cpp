@@ -30,3 +30,25 @@ int main() {
     // Create JuniorDeveloper and SeniorDeveloper objects
     auto junior = std::make_shared<JuniorDeveloper>("Peter Parker", "Spiderman");
     auto senior = std::make_shared<SeniorDeveloper>("Diana Prince", "Wonder Woman");
+
+
+    // Load the logos from the files
+    try {
+        junior->load_logo_from_file(logo_path + "spiderman.txt");
+        senior->load_logo_from_file(logo_path + "wonderwoman.txt");
+    } catch (const std::runtime_error& e) {
+        std::cerr << e.what() << std::endl;
+        return 1; // Exit the program if loading the logos fails
+    }
+
+    // Add the Developer objects to the vector
+    developers.push_back(junior);
+    developers.push_back(senior);
+
+    // Iterate over the vector and call the solve_problem method for each Developer object
+    for (const auto& dev : developers) {
+        dev->solve_problem();
+    }
+
+    return 0; // Exit the program successfully
+}
