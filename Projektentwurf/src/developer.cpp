@@ -27,8 +27,7 @@ void Developer::load_logo_from_file(const std::string& filename) {
     if (!file.is_open()) {
         throw std::runtime_error("Unable to open file: " + filename); // Throw an error if the file cannot be opened
     }
-      std::cout << "the logo file cannot be opened";
-//    std::getline(file, logo, '\0'); // Read the entire contents of the file into the variable logo
+    std::getline(file, logo, '\0'); // Read the entire contents of the file into the variable logo
 }
 
 // Overloaded output operator to use a Developer object with std::cout
@@ -39,6 +38,7 @@ std::ostream& operator<<(std::ostream& os, const Developer& dev) {
     }
     return os;
 }
+
 // Constructor of the JuniorDeveloper class, calls the constructor of the base class
 JuniorDeveloper::JuniorDeveloper(const std::string& name, const std::string& alias) 
     : Developer(name, alias) {}
