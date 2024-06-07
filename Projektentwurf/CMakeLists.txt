@@ -30,7 +30,7 @@ target_link_libraries(library_ex_exec PRIVATE  uni_library)
 
 
 
-// gtest:
+#gtest:
 enable_testing()
 # check if we have gtest
 find_package(GTest REQUIRED)

@@ -12,6 +12,9 @@ make
 # Run the executable
 ./library_ex_exec
 
+# Run the tests
+ctest
+
 # Navigate back to the parent directory
 cd .. 
 
