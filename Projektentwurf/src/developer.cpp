@@ -18,7 +18,7 @@ std::string Developer::getAlias() const {
 
 // Static method that outputs a message
 void Developer::drink_coffee() {
-    std::cout << "Ahhhh, I needed that coffee!!!" << std::endl;
+    std::cout << "Ahhhh, I needed that coffee!!!\n" << std::endl;
 }
 
 // Method to load a logo from a file
@@ -32,10 +32,10 @@ void Developer::load_logo_from_file(const std::string& filename) {
 
 // Overloaded output operator to use a Developer object with std::cout
 std::ostream& operator<<(std::ostream& os, const Developer& dev) {
-    os << "Name: " << dev.getName() << "\nAlias: " << dev.getAlias();
     if (!dev.logo.empty()) { // If the logo is not empty, add it to the output
-        os << "\nLogo: " << dev.logo;
+        os << "\nLogo:\n " << dev.logo;
     }
+    os << "\nName: " << dev.getName() << "\nAlias: " << dev.getAlias(); //add Name and Alias to the output
     return os;
 }
 
