@@ -16,6 +16,11 @@ std::string Developer::getAlias() const {
     return alias;
 }
 
+// Getter method to get the logo
+std::string Developer::getLogo() const {
+    return logo;
+}
+
 // Static method that outputs a message
 void Developer::drink_coffee() {
     std::cout << "Ahhhh, I needed that coffee!!!" << std::endl;

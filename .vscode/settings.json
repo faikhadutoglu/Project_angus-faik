@@ -92,4 +92,5 @@
         "locale": "cpp",
         "queue": "cpp"
     },
+    "cmake.sourceDirectory": "/workspaces/Project_angus-faik/Projektentwurf",
 }

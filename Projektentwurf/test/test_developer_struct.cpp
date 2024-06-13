@@ -15,7 +15,9 @@ TEST(DeveloperTest, TestJuniorDeveloper) {
 
 TEST(DeveloperTest, sdTestLoadLogo) {
     JuniorDeveloper jd("Peter Parker", "Spiderman");
-    EXPECT_THROW(jd.load_logo_from_file("invalid_path"), std::runtime_error);
+    EXPECT_EQ(jd.getLogo(), "");
+    jd.load_logo_from_file("/workspaces/Project_angus-faik/Projektentwurf/logos/test_logo");
+    EXPECT_EQ(jd.getLogo(), "test test test");
 }
 TEST(DeveloperTest, sdTestLoadLogoInvalidPath) {
     SeniorDeveloper sd("Diana Prince", "Wonder Woman");

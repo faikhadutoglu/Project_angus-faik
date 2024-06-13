@@ -12,6 +12,8 @@ public:
 
     std::string getName() const;
     std::string getAlias() const;
+    std::string getLogo() const;
+
 
     static void drink_coffee();
     void load_logo_from_file(const std::string& filename);
