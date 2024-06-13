@@ -37,10 +37,11 @@ void Developer::load_logo_from_file(const std::string& filename) {
 
 // Overloaded output operator to use a Developer object with std::cout
 std::ostream& operator<<(std::ostream& os, const Developer& dev) {
-    os << "Name: " << dev.getName() << "\nAlias: " << dev.getAlias();
+    std::cout<<"\nSolving a problem:"<<std::endl;
     if (!dev.logo.empty()) { // If the logo is not empty, add it to the output
-        os << "\nLogo: " << dev.logo;
+        os << "Logo:\n" << dev.logo;
     }
+    os << "\nName: " << dev.getName() << "\nAlias: " << dev.getAlias();
     return os;
 }
 
